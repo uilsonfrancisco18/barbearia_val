@@ -230,3 +230,133 @@ body::before {
 .botoes {
     text-align: center;
 }
+
+.body-sobre {
+    background: var(--cor-secundaria); 
+    height: auto; 
+}
+
+.secao-sobre-pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 50px 50px 50px; 
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.secao-sobre-pagina h1 {
+    color: var(--cor-primaria);
+    font-size: clamp(2.5em, 5vw, 4.5em);
+    margin-top: 20px;
+}
+
+.body-sobre .botoes {
+    display: none !important; 
+}
+
+.secao-sobre-pagina h1 {
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.secao-sobre-pagina p {
+    font-size: 1.15em; 
+    line-height: 1.8; 
+    font-weight: 300; 
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divisoria {
+    width: 80px;
+    height: 3px;
+    background-color: var(--cor-primaria);
+    margin: 20px auto 40px auto;
+    border-radius: 2px;
+}
+
+.botao-secundario {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.body-contato .botoes {
+    display: none !important; 
+}
+
+.body-contato {
+    background: var(--cor-secundaria); 
+    height: auto; 
+}
+
+.secao-contato-pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 50px 50px 50px; 
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.secao-contato-pagina h1 {
+    color: var(--cor-primaria);
+    font-size: clamp(2.5em, 5vw, 4.5em);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.contato-info {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contato-detalhes {
+    margin: 40px auto;
+}
+
+.numero-principal {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-top: 10px;
+}
+
+.botao-whatsapp {
+    background-color: #25D366; 
+    color: white; 
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block; 
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.5);
+}
+
+.botao-whatsapp:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.7);
+}
