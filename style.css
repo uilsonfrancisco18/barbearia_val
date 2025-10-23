@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --cor-primaria: #c19a6b; 
+  --cor-secundaria: #0d0d0d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +16,217 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   height: 100vh;
-  background: url('Barbeiro\ em\ ação\ com\ lâmina\ rente.png') no-repeat center center fixed;
-  background-size: cover; /* Mantém a proporção e cobre toda a tela */
-  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
-  background-position: center;
-  font-family: Arial, sans-serif;
+  color: white; 
+  text-align: center;
+  
+  background: url('Barbeiro em ação com lâmina rente.png') no-repeat center center fixed;
+  background-size: cover; 
+  background-attachment: fixed;
 }
 
+.container-principal {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  z-index: 5;
+}
+
+.titulo h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--cor-primaria);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.paragrafo p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.opçoes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 15px 60px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.nav-sobre {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-right: auto; 
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--cor-primaria);
+}
+
+.botoes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 15px 60px; 
+  z-index: 11; 
+}
+
+.botao-agendar {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria); 
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block; 
+}
+
+.botao-agendar:hover {
+  background-color: #e2b075;
+  transform: scale(1.05);
+}
+
+h1 {
+  letter-spacing: 3px; 
+  line-height: 1.2; 
+  font-size: clamp(2em, 5vw, 4em); 
+}
+
+.paragrafo p {
+  line-height: 1.6; 
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(1em, 2vw, 1.2em); 
+}
+
+.nav-link {
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+  letter-spacing: 1px; 
+}
+
+.nav-link:hover {
+  letter-spacing: 2px; 
+  transform: translateY(-2px); 
+}
+
+.botao-agendar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  transition: all 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.botao-agendar:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  transform: scale(1.08); 
+}
+
+.container-principal {
+  border: 1px solid rgba(var(--cor-primaria), 0.3); 
+  border-radius: 15px; 
+  backdrop-filter: blur(8px); 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-principal:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9);
+}
+
+.opçoes {
+  padding: 18px 70px; 
+}
+
+.botoes {
+    position: static;
+    display: block; 
+    text-align: center; 
+    margin-top: 30px; 
+    padding: 0; 
+    box-shadow: none; 
+}
+
+.botao-agendar {
+    padding: 12px 28px; 
+}
+
+.botao-agendar:hover {
+    transform: scale(1.05); 
+}
+
+body {
+    perspective: 1px;
+}
+
+main, .opçoes {
+    transform-style: preserve-3d;
+}
+
+body {
+    perspective: 1px;
+}
+
+main, .opçoes {
+    transform-style: preserve-3d;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateZ(-1px) scale(2); 
+    background: inherit; 
+    z-index: -1; 
+}
+
+.nav-link:focus, .botao-agendar:focus {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 3px; 
+    border-radius: 4px; 
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 5px var(--cor-primaria);
+}
+
+@media (max-width: 768px) {
+    .opçoes, .botoes {
+        padding: 15px 20px;
+    }
+
+    .nav-sobre {
+        gap: 15px; 
+    }
+
+    .container-principal {
+        padding: 30px 20px;
+    }
+}
+
+.botoes {
+    text-align: center;
+}
