@@ -360,3 +360,299 @@ body::before {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(37, 211, 102, 0.7);
 }
+
+/* ==================================== */
+/* XIII. ESTILOS PARA PÁGINA SERVICOS.HTML */
+/* ==================================== */
+
+/* Oculta o botão de agendar na navbar, se ele estiver lá */
+.body-servicos .botoes {
+    display: none !important; 
+}
+
+/* O body-servicos usa o fundo preto sólido */
+.body-servicos {
+    background: var(--cor-secundaria); 
+    height: auto; 
+}
+
+/* Reutiliza o estilo de layout centralizado da página SOBRE/CONTATO */
+.secao-servicos-pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo, para dar espaço à lista */
+    align-items: center;
+    padding: 120px 50px 80px 50px; /* Mais padding no topo e no rodapé */
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.secao-servicos-pagina h1 {
+    /* Título principal dos serviços */
+    color: var(--cor-primaria);
+    font-size: clamp(3em, 6vw, 4.5em);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.servicos-intro {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    font-weight: 300;
+    color: var(--cor-texto-suave);
+    max-width: 700px;
+}
+
+/* Container da Lista de Serviços */
+.lista-servicos {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 60px;
+    border: 1px solid rgba(193, 154, 107, 0.2); /* Borda sutil */
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a borda arredondada funcione nos itens */
+}
+
+/* Item Individual da Lista */
+.servico-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Linha divisória sutil */
+    transition: background-color 0.3s ease;
+}
+
+.servico-item:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+/* Efeito Hover na Lista */
+.servico-item:hover {
+    background-color: rgba(193, 154, 107, 0.05); /* Fundo muito sutil no hover */
+}
+
+.servico-item span {
+    color: var(--cor-texto-claro);
+}
+
+.servico-item .preco {
+    color: var(--cor-primaria); /* Preço em destaque */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* CTA Final de Agendamento */
+.agendamento-cta {
+    margin-top: 40px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(193, 154, 107, 0.1);
+}
+
+.agendamento-cta h2 {
+    color: var(--cor-primaria);
+    font-size: clamp(1.8em, 3vw, 2.5em);
+    margin-bottom: 15px;
+}
+
+.agendamento-cta p {
+    color: var(--cor-texto-suave);
+    margin-bottom: 30px;
+}
+
+/* Estilo do Botão Final (Super Destaque) */
+.botao-agendar-final {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 18px 50px;
+    border-radius: 50px; /* Pílula */
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.botao-agendar-final:hover {
+    background-color: #d1b48b;
+    transform: scale(1.1) translateY(-5px); /* Efeito de pulo dramático */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9), 0 0 20px var(--cor-primaria); /* Sombra intensa + brilho */
+}
+
+/* Responsividade da Lista */
+@media (max-width: 500px) {
+    .servico-item {
+        padding: 15px 20px;
+        flex-direction: column; /* Quebra em coluna no mobile */
+        align-items: flex-start;
+    }
+    .servico-item .preco {
+        margin-top: 5px;
+        font-size: 1.1em;
+    }
+    .botao-agendar-final {
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+}
+
+:root {
+  /* ... (Mantenha suas variáveis existentes) ... */
+  --cor-texto-claro: #f0f0f0;    /* Branco Suave */
+  --cor-texto-suave: #a0a0a0;    /* Cinza Claro */
+}
+.secao-servicos-pagina h1 {
+    /* Título principal dos serviços */
+    color: var(--cor-primaria);
+    font-size: clamp(3em, 6vw, 4.5em);
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Aumenta o espaçamento para mais elegância */
+    font-weight: 800; /* Mais peso para o título principal */
+    text-shadow: 0 0 15px rgba(193, 154, 107, 0.7); /* Brilho dourado mais marcante */
+}
+
+.servicos-intro {
+    font-size: 1.15em; /* Ligeiramente maior para melhor leitura */
+    line-height: 1.7;
+    font-weight: 300;
+    color: var(--cor-texto-suave); /* Usa o cinza suave para introdução */
+    max-width: 600px; /* Limita a largura para melhor legibilidade */
+}
+
+.divisoria {
+    width: 100px; /* Mais larga para acompanhar o título grande */
+    height: 4px;
+    margin: 20px auto 50px auto; /* Aumenta a margem de baixo */
+    box-shadow: 0 0 10px var(--cor-primaria); /* Adiciona um brilho elegante */
+}
+/* Container da Lista de Serviços (Onde vai a lista) */
+.lista-servicos {
+    width: 100%;
+    max-width: 750px; /* Aumenta a largura máxima para parecer mais profissional */
+    margin: 40px auto 60px auto;
+    background-color: rgba(10, 10, 10, 0.95); /* Deixa o fundo quase preto para mais contraste */
+    border-radius: 12px;
+    border: 1px solid rgba(193, 154, 107, 0.2); /* Borda dourada mais visível */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9); /* Sombra mais profunda */
+    overflow: hidden;
+}
+
+/* Item Individual da Lista */
+.servico-item {
+    padding: 22px 35px; /* Mais padding (espaço interno) para uma sensação premium */
+    font-size: 1.15em; 
+    font-weight: 400; /* Reduz o peso da fonte para o nome do serviço (mais clean) */
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15); /* Adiciona uma linha tracejada elegante */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer; 
+}
+
+/* Remove a linha divisória do último item */
+.servico-item:last-child {
+    border-bottom: none; 
+}
+
+/* Efeito Hover (Elevação, Brilho, e Fundo) */
+.servico-item:hover {
+    background-color: rgba(193, 154, 107, 0.1); /* Fundo sutil mais claro */
+    transform: translateX(5px); /* Desliza sutilmente para a direita, indicando seleção */
+    box-shadow: inset 5px 0 0 var(--cor-primaria); /* Adiciona uma linha vertical dourada na esquerda */
+}
+
+/* Destaque do Preço (Mais Brilho e Peso) */
+.servico-item .preco {
+    color: var(--cor-primaria); 
+    font-weight: 700;
+    font-size: 1.3em; /* Deixa o preço ligeiramente maior */
+    letter-spacing: 1.8px; 
+    text-shadow: 0 0 8px rgba(193, 154, 107, 0.6); /* Brilho mais visível */
+}
+.agendamento-cta {
+    margin-top: 60px; /* Mais espaço acima */
+    padding: 50px; /* Mais padding interno */
+    background: rgba(10, 10, 10, 0.7); /* Fundo mais escuro */
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(193, 154, 107, 0.2);
+}
+
+.agendamento-cta h2 {
+    font-size: clamp(2em, 4vw, 3em); /* Título do CTA mais forte */
+}
+
+/* Botão AGENDAR AGORA (o CTA principal) */
+.botao-agendar-final {
+    /* Mantém o seu estilo dramático de pulo, mas com cores mais definidas */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria); /* Usa o preto sólido para o texto */
+    font-weight: 900; /* Super negrito */
+}
+
+/* ==================================== */
+/* XIV. ESTILOS PARA PÁGINA SERVICOS.HTML (ALINHAMENTO E NOTA) */
+/* ==================================== */
+
+/* Modifica a seção principal:
+   Mantém o alinhamento centralizado para o container, 
+   mas centraliza apenas verticalmente e horizontalmente */
+.secao-servicos-pagina {
+    /* Mantenha a maioria dos estilos, mas remova 'text-align: center;' 
+       se você quiser que *todo* o conteúdo vá para a esquerda.
+       Se você quer que *apenas* o intro vá para a esquerda, continue: */
+    text-align: center; /* Mantém o H1 centralizado */
+    /* ... (resto do bloco secao-servicos-pagina) ... */
+}
+
+/* NOVO: Classe para alinhar o texto introdutório à esquerda */
+.servicos-intro-alinhado {
+    /* Se você quer que a frase vá para a esquerda, 
+       ajuste este seletor para onde a frase está */
+    text-align: left; 
+    margin: 0 auto 50px auto; /* Mantém o bloco centralizado na tela */
+    max-width: 750px; /* Ajuste o max-width para corresponder à lista */
+}
+
+/* Modificação da Nota Demonstrativa */
+.nota-demonstrativa {
+    display: block; /* Quebra linha para a nota */
+    margin-top: 15px;
+    font-size: 0.9em; /* Ligeiramente menor para ser discreto */
+    font-weight: 400;
+    color: #ffcc00; /* Cor amarela/dourada suave para chamar atenção */
+    padding: 10px;
+    background: rgba(193, 154, 107, 0.05); /* Fundo muito sutil */
+    border-left: 3px solid #ffcc00; /* Linha de destaque na lateral */
+    border-radius: 4px;
+}
+
+
+/* --- APLICAÇÃO DOS ESTILOS --- */
+
+/* Altere o seu seletor .servicos-intro no CSS para garantir o alinhamento à esquerda */
+.servicos-intro {
+    font-size: 1.15em; 
+    line-height: 1.7;
+    font-weight: 300;
+    color: var(--cor-texto-suave); 
+    max-width: 750px; /* Use o mesmo max-width da lista de serviços */
+    margin-left: auto;
+    margin-right: auto;
+    /* NOVO: Alinha o texto dentro do bloco centralizado para a esquerda */
+    text-align: left; 
+}
+
+/* Centraliza o título, mantendo a consistência do design */
+.secao-servicos-pagina h1 {
+    text-align: center; 
+}
