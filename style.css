@@ -656,3 +656,91 @@ body::before {
 .secao-servicos-pagina h1 {
     text-align: center; 
 }
+
+/* ==================================== */
+/* XVI. ESTILOS PARA PÁGINA SELECAO-SERVICO.HTML */
+/* ==================================== */
+
+.body-selecao {
+    background: var(--cor-secundaria);
+    height: auto;
+}
+
+.secao-selecao-pagina {
+    min-height: 100vh;
+    padding: 120px 50px 80px 50px;
+    background-color: var(--cor-secundaria);
+    text-align: center;
+}
+
+.secao-selecao-pagina h1 {
+    color: var(--cor-primaria);
+    font-size: clamp(3em, 6vw, 4em);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.selecao-intro {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin: 20px auto 50px auto;
+    font-weight: 300;
+    color: var(--cor-texto-suave);
+    max-width: 800px;
+}
+
+/* Layout de Blocos (GRID) */
+.servicos-selecao-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    
+    display: grid;
+    /* 3 colunas em telas grandes, se ajustando para 2 ou 1 no mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px; /* Espaçamento entre os blocos */
+}
+
+/* Estilo do Bloco Individual (CARD) */
+.card-selecao-servico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Cores e Borda */
+    background-color: rgba(10, 10, 10, 0.9);
+    border: 1px solid rgba(193, 154, 107, 0.2);
+    border-radius: 10px;
+    
+    padding: 30px 20px;
+    text-decoration: none;
+    color: var(--cor-texto-claro);
+    
+    /* Sombra e Transição */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-selecao-servico:hover {
+    transform: translateY(-5px) scale(1.02); /* Efeito de elevação dramático */
+    background-color: rgba(193, 154, 107, 0.05); /* Fundo sutil */
+    border-color: var(--cor-primaria); /* Borda em destaque */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(193, 154, 107, 0.5); /* Sombra + Brilho */
+}
+
+.card-selecao-servico h3 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.preco-selecao {
+    color: var(--cor-primaria);
+    font-size: 1.6em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(193, 154, 107, 0.4);
+}
