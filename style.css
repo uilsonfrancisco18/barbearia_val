@@ -744,3 +744,98 @@ body::before {
     letter-spacing: 1px;
     text-shadow: 0 0 5px rgba(193, 154, 107, 0.4);
 }
+.card-selecao-servico:hover {
+    transform: scale(1.03);
+}
+/* ===== GRID DE SERVIÇOS ===== */
+.servicos-selecao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===== CARD ===== */
+.card-selecao-servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #0d0d0d;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-selecao-servico:hover {
+    transform: scale(1.03);
+}
+/* ===== GRID DE SERVIÇOS ===== */
+.servicos-selecao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===== CARD ===== */
+.card-selecao-servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card-selecao-servico:hover {
+    transform: scale(1.03);
+}
+
+/* ===== TÍTULO ===== */
+.card-selecao-servico h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* ===== CONTAINER DA IMAGEM ===== */
+.card-selecao-servico div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 10px 0;
+}
+
+/* ===== IMAGEM PADRÃO (TODAS AS VARIAÇÕES) ===== */
+.card-selecao-servico img,
+.nariz img,
+.orelhas img,
+.cortebarba img,
+.barbahigien img,
+.barba img,
+.corte-infantil img,
+.corte-americano img,
+.barboterapia img,
+.sombrancelha img,
+.luzes img,
+.platinado img,
+.pigmentação img,
+.barbga-pigmento img,
+.todo-maquina img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ===== PREÇO ===== */
+.preco-selecao {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
