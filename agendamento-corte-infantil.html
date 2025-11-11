@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Corte Infantil - Rota Cortes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+</head>
+<body class="body-agendamento">
+    <nav class="opçoes" aria-label="Navegação Principal">
+        <ul class="nav-sobre">
+            <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+            <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+            <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+            <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+        </ul>
+    </nav>
+
+    <main class="secao-agendamento-pagina">
+        <div class="container-agendamento">
+            <h1 class="titulo-agendamento">Corte Infantil</h1>
+            <div class="divisoria"></div>
+            
+            <div class="info-servico-agendamento">
+                <div class="imagem-servico">
+                    <img src="corte de criança.jpg" alt="Corte Infantil">
+                </div>
+                <div class="detalhes-servico">
+                    <h3>Descrição do Serviço</h3>
+                    <p>Corte especializado para crianças com abordagem lúdica e cuidadosa. Ambiente acolhedor e profissionais pacientes para garantir o conforto dos pequenos. Inclui cortes modernos e adequados para cada idade.</p>
+                    
+                    <div class="info-preco-duracao">
+                        <div class="preco-agendamento">R$ 25,00</div>
+                        <div class="duracao-servico">⏱️ Duração: 30-40 minutos</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="formulario-agendamento">
+                <div class="secao-data">
+                    <h3>📅 Selecione a Data</h3>
+                    <input type="date" id="data-agendamento" name="data" class="input-data" required>
+                </div>
+
+                <div class="secao-horario">
+                    <h3>🕒 Horários Disponíveis</h3>
+                    <div class="grid-horarios">
+                        <!-- Manhã -->
+                        <div class="grupo-horario">
+                            <h4>Manhã</h4>
+                            <div class="horarios-manha">
+                                <button type="button" class="botao-horario" data-horario="08:00">08:00</button>
+                                <button type="button" class="botao-horario" data-horario="08:40">08:40</button>
+                                <button type="button" class="botao-horario" data-horario="09:20">09:20</button>
+                                <button type="button" class="botao-horario" data-horario="10:00">10:00</button>
+                                <button type="button" class="botao-horario" data-horario="10:40">10:40</button>
+                                <button type="button" class="botao-horario" data-horario="11:20">11:20</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarde -->
+                        <div class="grupo-horario">
+                            <h4>Tarde</h4>
+                            <div class="horarios-tarde">
+                                <button type="button" class="botao-horario" data-horario="13:00">13:00</button>
+                                <button type="button" class="botao-horario" data-horario="13:40">13:40</button>
+                                <button type="button" class="botao-horario" data-horario="14:20">14:20</button>
+                                <button type="button" class="botao-horario" data-horario="15:00">15:00</button>
+                                <button type="button" class="botao-horario" data-horario="15:40">15:40</button>
+                                <button type="button" class="botao-horario" data-horario="16:20">16:20</button>
+                                <button type="button" class="botao-horario" data-horario="17:00">17:00</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secao-dados-cliente">
+                    <h3>👤 Dados da Criança</h3>
+                    <div class="inputs-cliente">
+                        <input type="text" placeholder="Nome da criança" class="input-cliente" required>
+                        <input type="number" placeholder="Idade da criança" class="input-cliente" min="0" max="12">
+                        <input type="text" placeholder="Nome do responsável" class="input-cliente" required>
+                        <input type="tel" placeholder="Telefone/WhatsApp" class="input-cliente" required>
+                        <textarea placeholder="Observações especiais (medos, preferências, etc.)" class="input-cliente textarea-obs" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-confirmar-agendamento">
+                    ✅ Agendar Corte Infantil
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Script para seleção de horários
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesHorario = document.querySelectorAll('.botao-horario');
+            let horarioSelecionado = null;
+
+            botoesHorario.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    // Remove seleção anterior
+                    botoesHorario.forEach(b => b.classList.remove('selecionado'));
+                    
+                    // Adiciona seleção atual
+                    this.classList.add('selecionado');
+                    horarioSelecionado = this.getAttribute('data-horario');
+                    
+                    console.log('Horário selecionado:', horarioSelecionado);
+                });
+            });
+
+            // Não permitir datas passadas
+            const inputData = document.getElementById('data-agendamento');
+            const hoje = new Date().toISOString().split('T')[0];
+            inputData.min = hoje;
+
+            // Validação do formulário
+            const formulario = document.querySelector('.formulario-agendamento');
+            formulario.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!horarioSelecionado) {
+                    alert('⚠️ Por favor, selecione um horário!');
+                    return;
+                }
+
+                const nomeCrianca = document.querySelectorAll('input[type="text"]')[0].value;
+                const nomeResponsavel = document.querySelectorAll('input[type="text"]')[1].value;
+                const telefone = document.querySelector('input[type="tel"]').value;
+                const data = inputData.value;
+
+                if (!nomeCrianca || !nomeResponsavel || !telefone || !data) {
+                    alert('⚠️ Preencha todos os campos obrigatórios!');
+                    return;
+                }
+
+                // Simulação de agendamento
+                alert(`🎉 Agendamento Confirmado!\n\n👶 Serviço: Corte Infantil\n🧒 Nome da Criança: ${nomeCrianca}\n👨‍💼 Responsável: ${nomeResponsavel}\n📅 Data: ${data}\n🕒 Horário: ${horarioSelecionado}\n📞 Contato: ${telefone}\n💰 Valor: R$ 25,00\n\nEntraremos em contato para confirmação!`);
+                
+                // Aqui você pode adicionar o envio para o backend
+                // formulario.submit();
+            });
+        });
+    </script>
+</body>
+</html>

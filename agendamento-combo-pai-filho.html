@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Combo Pai & Filho - Rota Cortes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+</head>
+<body class="body-agendamento">
+    <nav class="opçoes" aria-label="Navegação Principal">
+        <ul class="nav-sobre">
+            <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+            <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+            <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+            <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+        </ul>
+    </nav>
+
+    <main class="secao-agendamento-pagina">
+        <div class="container-agendamento">
+            <h1 class="titulo-agendamento">Combo Pai & Filho</h1>
+            <div class="divisoria"></div>
+            
+            <div class="info-servico-agendamento">
+                <div class="imagem-servico">
+                    <img src="pai e filho.jpg" alt="Combo Pai & Filho">
+                </div>
+                <div class="detalhes-servico">
+                    <h3>Descrição do Serviço</h3>
+                    <p>Experiência especial para pai e filho! Inclui corte adulto completo e corte infantil com abordagem lúdica. Momento único de cuidado e diversão em família com atendimento simultâneo ou consecutivo.</p>
+                    
+                    <div class="info-preco-duracao">
+                        <div class="preco-agendamento">R$ 40,00</div>
+                        <div class="duracao-servico">⏱️ Duração: 60-75 minutos</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="formulario-agendamento">
+                <div class="secao-data">
+                    <h3>📅 Selecione a Data</h3>
+                    <input type="date" id="data-agendamento" name="data" class="input-data" required>
+                </div>
+
+                <div class="secao-horario">
+                    <h3>🕒 Horários Disponíveis</h3>
+                    <div class="grid-horarios">
+                        <!-- Manhã -->
+                        <div class="grupo-horario">
+                            <h4>Manhã</h4>
+                            <div class="horarios-manha">
+                                <button type="button" class="botao-horario" data-horario="08:00">08:00</button>
+                                <button type="button" class="botao-horario" data-horario="09:15">09:15</button>
+                                <button type="button" class="botao-horario" data-horario="10:30">10:30</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarde -->
+                        <div class="grupo-horario">
+                            <h4>Tarde</h4>
+                            <div class="horarios-tarde">
+                                <button type="button" class="botao-horario" data-horario="13:00">13:00</button>
+                                <button type="button" class="botao-horario" data-horario="14:15">14:15</button>
+                                <button type="button" class="botao-horario" data-horario="15:30">15:30</button>
+                                <button type="button" class="botao-horario" data-horario="16:45">16:45</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secao-dados-cliente">
+                    <h3>👨‍👦 Dados do Pai e Filho</h3>
+                    <div class="inputs-cliente">
+                        <h4>Dados do Pai</h4>
+                        <input type="text" placeholder="Nome completo do pai" class="input-cliente" required>
+                        
+                        <h4>Dados do Filho</h4>
+                        <input type="text" placeholder="Nome completo do filho" class="input-cliente" required>
+                        <input type="number" placeholder="Idade do filho" class="input-cliente" min="0" max="12">
+                        
+                        <h4>Contato</h4>
+                        <input type="tel" placeholder="Telefone/WhatsApp" class="input-cliente" required>
+                        <input type="email" placeholder="E-mail (opcional)" class="input-cliente">
+                        
+                        <textarea placeholder="Observações especiais (preferências de corte, etc.)" class="input-cliente textarea-obs" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-confirmar-agendamento">
+                    ✅ Agendar Combo Pai & Filho
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Script para seleção de horários
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesHorario = document.querySelectorAll('.botao-horario');
+            let horarioSelecionado = null;
+
+            botoesHorario.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    // Remove seleção anterior
+                    botoesHorario.forEach(b => b.classList.remove('selecionado'));
+                    
+                    // Adiciona seleção atual
+                    this.classList.add('selecionado');
+                    horarioSelecionado = this.getAttribute('data-horario');
+                    
+                    console.log('Horário selecionado:', horarioSelecionado);
+                });
+            });
+
+            // Não permitir datas passadas
+            const inputData = document.getElementById('data-agendamento');
+            const hoje = new Date().toISOString().split('T')[0];
+            inputData.min = hoje;
+
+            // Validação do formulário
+            const formulario = document.querySelector('.formulario-agendamento');
+            formulario.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!horarioSelecionado) {
+                    alert('⚠️ Por favor, selecione um horário!');
+                    return;
+                }
+
+                const nomePai = document.querySelectorAll('input[type="text"]')[0].value;
+                const nomeFilho = document.querySelectorAll('input[type="text"]')[1].value;
+                const telefone = document.querySelector('input[type="tel"]').value;
+                const data = inputData.value;
+
+                if (!nomePai || !nomeFilho || !telefone || !data) {
+                    alert('⚠️ Preencha todos os campos obrigatórios!');
+                    return;
+                }
+
+                // Simulação de agendamento
+                alert(`🎉 Agendamento Confirmado!\n\n👨‍👦 Serviço: Combo Pai & Filho\n👨 Nome do Pai: ${nomePai}\n🧒 Nome do Filho: ${nomeFilho}\n📅 Data: ${data}\n🕒 Horário: ${horarioSelecionado}\n📞 Contato: ${telefone}\n💰 Valor: R$ 40,00\n\nEntraremos em contato para confirmação!`);
+                
+                // Aqui você pode adicionar o envio para o backend
+                // formulario.submit();
+            });
+        });
+    </script>
+</body>
+</html>

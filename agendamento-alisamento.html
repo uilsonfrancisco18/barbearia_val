@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Alisamento Americano - Rota Cortes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+</head>
+<body class="body-agendamento">
+    <nav class="opçoes" aria-label="Navegação Principal">
+        <ul class="nav-sobre">
+            <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+            <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+            <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+            <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+        </ul>
+    </nav>
+
+    <main class="secao-agendamento-pagina">
+        <div class="container-agendamento">
+            <h1 class="titulo-agendamento">Alisamento Americano</h1>
+            <div class="divisoria"></div>
+            
+            <div class="info-servico-agendamento">
+                <div class="imagem-servico">
+                    <!-- Placeholder para imagem do alisamento americano -->
+                    <div style="width: 200px; height: 200px; background: rgba(193, 154, 107, 0.1); display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 2px solid var(--cor-primaria);">
+                        <span style="color: var(--cor-primaria); font-weight: 600; text-align: center;">Alisamento<br>Americano<br>💇‍♂️</span>
+                    </div>
+                </div>
+                <div class="detalhes-servico">
+                    <h3>Descrição do Serviço</h3>
+                    <p>Tratamento profissional que redefine a estrutura dos fios, eliminando o volume excessivo e proporcionando um alisamento natural e duradouro. Técnica americana que respeita a saúde capilar, resultando em cabelos lisos, sedosos e com brilho intenso.</p>
+                    
+                    <div class="info-preco-duracao">
+                        <div class="preco-agendamento">R$ 35,00</div>
+                        <div class="duracao-servico">⏱️ Duração: 90-120 minutos</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="formulario-agendamento">
+                <div class="secao-data">
+                    <h3>📅 Selecione a Data</h3>
+                    <input type="date" id="data-agendamento" name="data" class="input-data" required>
+                </div>
+
+                <div class="secao-horario">
+                    <h3>🕒 Horários Disponíveis</h3>
+                    <div class="grid-horarios">
+                        <!-- Manhã -->
+                        <div class="grupo-horario">
+                            <h4>Manhã</h4>
+                            <div class="horarios-manha">
+                                <button type="button" class="botao-horario" data-horario="08:00">08:00</button>
+                                <button type="button" class="botao-horario" data-horario="09:30">09:30</button>
+                                <button type="button" class="botao-horario" data-horario="11:00">11:00</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarde -->
+                        <div class="grupo-horario">
+                            <h4>Tarde</h4>
+                            <div class="horarios-tarde">
+                                <button type="button" class="botao-horario" data-horario="13:00">13:00</button>
+                                <button type="button" class="botao-horario" data-horario="14:30">14:30</button>
+                                <button type="button" class="botao-horario" data-horario="16:00">16:00</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secao-dados-cliente">
+                    <h3>👤 Seus Dados</h3>
+                    <div class="inputs-cliente">
+                        <input type="text" placeholder="Nome completo" class="input-cliente" required>
+                        <input type="tel" placeholder="Telefone/WhatsApp" class="input-cliente" required>
+                        <input type="email" placeholder="E-mail (opcional)" class="input-cliente">
+                        
+                        <div class="selecao-tipo-cabelo">
+                            <h4>💇 Tipo de Cabelo</h4>
+                            <div class="opcoes-tipo-cabelo">
+                                <label>
+                                    <input type="radio" name="tipo-cabelo" value="liso-ondulado" checked>
+                                    <span class="opcao-titulo">Liso/Ondulado</span>
+                                    <span class="opcao-desc">Pouco volume</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tipo-cabelo" value="cacheado">
+                                    <span class="opcao-titulo">Cacheado</span>
+                                    <span class="opcao-desc">Cachos definidos</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tipo-cabelo" value="crespo">
+                                    <span class="opcao-titulo">Crespo</span>
+                                    <span class="opcao-desc">Volume intenso</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tipo-cabelo" value="quimicamente-tratado">
+                                    <span class="opcao-titulo">Quimicamente Tratado</span>
+                                    <span class="opcao-desc">Coloração/outros processos</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="selecao-comprimento">
+                            <h4>📏 Comprimento do Cabelo</h4>
+                            <div class="opcoes-comprimento">
+                                <label>
+                                    <input type="radio" name="comprimento" value="curto" checked>
+                                    <span class="opcao-titulo">Curto</span>
+                                    <span class="opcao-desc">Até os ombros</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="comprimento" value="medio">
+                                    <span class="opcao-titulo">Médio</span>
+                                    <span class="opcao-desc">Ombro a escapular</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="comprimento" value="longo">
+                                    <span class="opcao-titulo">Longo</span>
+                                    <span class="opcao-desc">Abaixo da escapular</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="info-alisamento">
+                            <h4>⚠️ Informações Importantes</h4>
+                            <p>• <strong>Duração do efeito:</strong> 2-3 meses</p>
+                            <p>• <strong>Preparação:</strong> Não lave o cabelo 24-48h antes</p>
+                            <p>• <strong>Pós-tratamento:</strong> Use produtos específicos para cabelos alisados</p>
+                            <p>• <strong>Contraindicações:</strong> Gestantes e lactantes</p>
+                            <p>• <strong>Manutenção:</strong> Retoque a cada 3 meses</p>
+                        </div>
+
+                        <div class="alerta-testes">
+                            <h4>🧪 Teste de Sensibilidade</h4>
+                            <p>Realizamos teste de sensibilidade 48h antes do procedimento. Entre em contato para agendar o teste.</p>
+                        </div>
+                        
+                        <textarea placeholder="Observações (alergias conhecidas, tratamentos anteriores, medicamentos em uso, etc.)" class="input-cliente textarea-obs" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-confirmar-agendamento">
+                    ✅ Agendar Alisamento Americano
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Script para seleção de horários
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesHorario = document.querySelectorAll('.botao-horario');
+            let horarioSelecionado = null;
+
+            botoesHorario.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    // Remove seleção anterior
+                    botoesHorario.forEach(b => b.classList.remove('selecionado'));
+                    
+                    // Adiciona seleção atual
+                    this.classList.add('selecionado');
+                    horarioSelecionado = this.getAttribute('data-horario');
+                    
+                    console.log('Horário selecionado:', horarioSelecionado);
+                });
+            });
+
+            // Não permitir datas passadas
+            const inputData = document.getElementById('data-agendamento');
+            const hoje = new Date().toISOString().split('T')[0];
+            inputData.min = hoje;
+
+            // Validação do formulário
+            const formulario = document.querySelector('.formulario-agendamento');
+            formulario.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!horarioSelecionado) {
+                    alert('⚠️ Por favor, selecione um horário!');
+                    return;
+                }
+
+                const nome = document.querySelector('input[type="text"]').value;
+                const telefone = document.querySelector('input[type="tel"]').value;
+                const data = inputData.value;
+                const tipoCabeloSelecionado = document.querySelector('input[name="tipo-cabelo"]:checked');
+                const comprimentoSelecionado = document.querySelector('input[name="comprimento"]:checked');
+
+                if (!nome || !telefone || !data) {
+                    alert('⚠️ Preencha todos os campos obrigatórios!');
+                    return;
+                }
+
+                const tiposCabelo = {
+                    'liso-ondulado': 'Liso/Ondulado',
+                    'cacheado': 'Cacheado', 
+                    'crespo': 'Crespo',
+                    'quimicamente-tratado': 'Quimicamente Tratado'
+                };
+
+                const comprimentos = {
+                    'curto': 'Curto',
+                    'medio': 'Médio',
+                    'longo': 'Longo'
+                };
+
+                const tipoCabelo = tiposCabelo[tipoCabeloSelecionado.value];
+                const comprimentoCabelo = comprimentos[comprimentoSelecionado.value];
+
+                // Simulação de agendamento
+                alert(`🎉 Agendamento Confirmado!\n\n💎 Serviço: Alisamento Americano\n💇 Tipo de Cabelo: ${tipoCabelo}\n📏 Comprimento: ${comprimentoCabelo}\n📅 Data: ${data}\n🕒 Horário: ${horarioSelecionado}\n👤 Cliente: ${nome}\n📞 Contato: ${telefone}\n💰 Valor: R$ 35,00\n\n⚠️ IMPORTANTE:\n• Não lave o cabelo 24-48h antes\n• Duração: 2-3 meses\n• Entre em contato para agendar teste de sensibilidade\n\nEntraremos em contato para confirmação!`);
+                
+                // Aqui você pode adicionar o envio para o backend
+                // formulario.submit();
+            });
+        });
+    </script>
+
+    <style>
+        .selecao-tipo-cabelo,
+        .selecao-comprimento,
+        .info-alisamento,
+        .alerta-testes {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(193, 154, 107, 0.2);
+        }
+        
+        .selecao-tipo-cabelo h4,
+        .selecao-comprimento h4,
+        .info-alisamento h4,
+        .alerta-testes h4 {
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .opcoes-tipo-cabelo,
+        .opcoes-comprimento {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .opcoes-tipo-cabelo label,
+        .opcoes-comprimento label {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid rgba(193, 154, 107, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .opcoes-tipo-cabelo label:hover,
+        .opcoes-comprimento label:hover {
+            background: rgba(193, 154, 107, 0.1);
+            border-color: var(--cor-primaria);
+            transform: translateY(-2px);
+        }
+        
+        .opcoes-tipo-cabelo input[type="radio"],
+        .opcoes-comprimento input[type="radio"] {
+            margin-bottom: 10px;
+        }
+        
+        .opcao-titulo {
+            color: var(--cor-primaria);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+        
+        .opcao-desc {
+            color: var(--cor-texto-suave);
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .opcoes-tipo-cabelo input[type="radio"]:checked + .opcao-titulo,
+        .opcoes-comprimento input[type="radio"]:checked + .opcao-titulo {
+            color: #fff;
+        }
+        
+        .opcoes-tipo-cabelo label:has(input[type="radio"]:checked),
+        .opcoes-comprimento label:has(input[type="radio"]:checked) {
+            background: rgba(193, 154, 107, 0.2);
+            border-color: var(--cor-primaria);
+            box-shadow: 0 0 10px rgba(193, 154, 107, 0.3);
+        }
+        
+        .info-alisamento p,
+        .alerta-testes p {
+            color: var(--cor-texto-suave);
+            line-height: 1.6;
+            margin: 8px 0;
+            font-size: 0.9em;
+        }
+        
+        .info-alisamento strong {
+            color: var(--cor-primaria);
+        }
+        
+        .alerta-testes {
+            background: rgba(193, 154, 107, 0.1);
+            border-color: var(--cor-primaria);
+        }
+    </style>
+</body>
+</html>

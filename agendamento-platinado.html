@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Platinado - Rota Cortes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+</head>
+<body class="body-agendamento">
+    <nav class="opçoes" aria-label="Navegação Principal">
+        <ul class="nav-sobre">
+            <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+            <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+            <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+            <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+        </ul>
+    </nav>
+
+    <main class="secao-agendamento-pagina">
+        <div class="container-agendamento">
+            <h1 class="titulo-agendamento">Platinado</h1>
+            <div class="divisoria"></div>
+            
+            <div class="info-servico-agendamento">
+                <div class="imagem-servico">
+                    <img src="nevou.jpg" alt="Platinado">
+                </div>
+                <div class="detalhes-servico">
+                    <h3>Descrição do Serviço</h3>
+                    <p>Transformação radical para o visual mais ousado! Processo de descoloração controlada que resulta em um loiro platinado intenso. Utilizamos produtos de alta qualidade e técnicas profissionais para garantir um resultado uniforme e com mínima agressão aos fios.</p>
+                    
+                    <div class="info-preco-duracao">
+                        <div class="preco-agendamento">R$ 70,00</div>
+                        <div class="duracao-servico">⏱️ Duração: 120-180 minutos</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="formulario-agendamento">
+                <div class="secao-data">
+                    <h3>📅 Selecione a Data</h3>
+                    <input type="date" id="data-agendamento" name="data" class="input-data" required>
+                </div>
+
+                <div class="secao-horario">
+                    <h3>🕒 Horários Disponíveis</h3>
+                    <div class="grid-horarios">
+                        <!-- Manhã -->
+                        <div class="grupo-horario">
+                            <h4>Manhã</h4>
+                            <div class="horarios-manha">
+                                <button type="button" class="botao-horario" data-horario="08:00">08:00</button>
+                                <button type="button" class="botao-horario" data-horario="10:30">10:30</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarde -->
+                        <div class="grupo-horario">
+                            <h4>Tarde</h4>
+                            <div class="horarios-tarde">
+                                <button type="button" class="botao-horario" data-horario="13:00">13:00</button>
+                                <button type="button" class="botao-horario" data-horario="15:30">15:30</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secao-dados-cliente">
+                    <h3>👤 Seus Dados</h3>
+                    <div class="inputs-cliente">
+                        <input type="text" placeholder="Nome completo" class="input-cliente" required>
+                        <input type="tel" placeholder="Telefone/WhatsApp" class="input-cliente" required>
+                        <input type="email" placeholder="E-mail (opcional)" class="input-cliente">
+                        
+                        <div class="selecao-tipo">
+                            <h4>⚡ Tipo de Platinado</h4>
+                            <div class="opcoes-tipo">
+                                <label>
+                                    <input type="radio" name="tipo" value="completo" checked>
+                                    <span class="opcao-titulo">Platinado Completo</span>
+                                    <span class="opcao-desc">Todo o cabelo platinado</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tipo" value="mechen">
+                                    <span class="opcao-titulo">Mechas Platinadas</span>
+                                    <span class="opcao-desc">Apenas algumas mechas</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tipo" value="degrade">
+                                    <span class="opcao-titulo">Platinado Degradê</span>
+                                    <span class="opcao-desc">Transição suave de cores</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tipo" value="manutencao">
+                                    <span class="opcao-titulo">Manutenção</span>
+                                    <span class="opcao-desc">Retoque da raiz</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="info-cor-atual">
+                            <h4>🎨 Cor Atual do Cabelo</h4>
+                            <div class="opcoes-cor-atual">
+                                <label>
+                                    <input type="radio" name="cor-atual" value="loiro" checked>
+                                    <span class="opcao-titulo">Loiro</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor-atual" value="castanho-claro">
+                                    <span class="opcao-titulo">Castanho Claro</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor-atual" value="castanho-medio">
+                                    <span class="opcao-titulo">Castanho Médio</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor-atual" value="castanho-escuro">
+                                    <span class="opcao-titulo">Castanho Escuro</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor-atual" value="preto">
+                                    <span class="opcao-titulo">Preto</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor-atual" value="colorido">
+                                    <span class="opcao-titulo">Colorido Anterior</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="alerta-importante">
+                            <h4>⚠️ Informações Importantes</h4>
+                            <p>• O processo pode levar de 2 a 3 horas dependendo da cor atual</p>
+                            <p>• Recomendamos não lavar o cabelo 24h antes do procedimento</p>
+                            <p>• Traga referências visuais do tom desejado</p>
+                            <p>• Cabelos muito escuros podem necessitar de mais sessões</p>
+                        </div>
+                        
+                        <textarea placeholder="Observações (alergias, tratamentos anteriores, referências de tom, etc.)" class="input-cliente textarea-obs" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-confirmar-agendamento">
+                    ✅ Agendar Platinado
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Script para seleção de horários
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesHorario = document.querySelectorAll('.botao-horario');
+            let horarioSelecionado = null;
+
+            botoesHorario.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    // Remove seleção anterior
+                    botoesHorario.forEach(b => b.classList.remove('selecionado'));
+                    
+                    // Adiciona seleção atual
+                    this.classList.add('selecionado');
+                    horarioSelecionado = this.getAttribute('data-horario');
+                    
+                    console.log('Horário selecionado:', horarioSelecionado);
+                });
+            });
+
+            // Não permitir datas passadas
+            const inputData = document.getElementById('data-agendamento');
+            const hoje = new Date().toISOString().split('T')[0];
+            inputData.min = hoje;
+
+            // Validação do formulário
+            const formulario = document.querySelector('.formulario-agendamento');
+            formulario.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!horarioSelecionado) {
+                    alert('⚠️ Por favor, selecione um horário!');
+                    return;
+                }
+
+                const nome = document.querySelector('input[type="text"]').value;
+                const telefone = document.querySelector('input[type="tel"]').value;
+                const data = inputData.value;
+                const tipoSelecionado = document.querySelector('input[name="tipo"]:checked');
+                const corAtualSelecionada = document.querySelector('input[name="cor-atual"]:checked');
+
+                if (!nome || !telefone || !data) {
+                    alert('⚠️ Preencha todos os campos obrigatórios!');
+                    return;
+                }
+
+                const tipos = {
+                    'completo': 'Platinado Completo',
+                    'mechen': 'Mechas Platinadas', 
+                    'degrade': 'Platinado Degradê',
+                    'manutencao': 'Manutenção'
+                };
+
+                const coresAtuais = {
+                    'loiro': 'Loiro',
+                    'castanho-claro': 'Castanho Claro',
+                    'castanho-medio': 'Castanho Médio',
+                    'castanho-escuro': 'Castanho Escuro',
+                    'preto': 'Preto',
+                    'colorido': 'Colorido Anterior'
+                };
+
+                const tipoPlatinado = tipos[tipoSelecionado.value];
+                const corAtual = coresAtuais[corAtualSelecionada.value];
+
+                // Simulação de agendamento
+                alert(`🎉 Agendamento Confirmado!\n\n💎 Serviço: Platinado\n⚡ Tipo: ${tipoPlatinado}\n🎨 Cor Atual: ${corAtual}\n📅 Data: ${data}\n🕒 Horário: ${horarioSelecionado}\n👤 Cliente: ${nome}\n📞 Contato: ${telefone}\n💰 Valor: R$ 70,00\n\n⚠️ IMPORTANTE: Não lave o cabelo 24h antes do procedimento!\n\nEntraremos em contato para confirmação!`);
+                
+                // Aqui você pode adicionar o envio para o backend
+                // formulario.submit();
+            });
+        });
+    </script>
+
+    <style>
+        .selecao-tipo,
+        .info-cor-atual {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(193, 154, 107, 0.2);
+        }
+        
+        .selecao-tipo h4,
+        .info-cor-atual h4 {
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .opcoes-tipo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .opcoes-cor-atual {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        .opcoes-tipo label,
+        .opcoes-cor-atual label {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid rgba(193, 154, 107, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .opcoes-tipo label:hover,
+        .opcoes-cor-atual label:hover {
+            background: rgba(193, 154, 107, 0.1);
+            border-color: var(--cor-primaria);
+            transform: translateY(-2px);
+        }
+        
+        .opcoes-tipo input[type="radio"],
+        .opcoes-cor-atual input[type="radio"] {
+            margin-bottom: 10px;
+        }
+        
+        .opcao-titulo {
+            color: var(--cor-primaria);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+        
+        .opcao-desc {
+            color: var(--cor-texto-suave);
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .opcoes-tipo input[type="radio"]:checked + .opcao-titulo,
+        .opcoes-cor-atual input[type="radio"]:checked + .opcao-titulo {
+            color: #fff;
+        }
+        
+        .opcoes-tipo label:has(input[type="radio"]:checked),
+        .opcoes-cor-atual label:has(input[type="radio"]:checked) {
+            background: rgba(193, 154, 107, 0.2);
+            border-color: var(--cor-primaria);
+            box-shadow: 0 0 10px rgba(193, 154, 107, 0.3);
+        }
+        
+        .alerta-importante {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(193, 154, 107, 0.1);
+            border: 1px solid var(--cor-primaria);
+            border-radius: 8px;
+            color: var(--cor-texto-claro);
+        }
+        
+        .alerta-importante h4 {
+            color: var(--cor-primaria);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .alerta-importante p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+    </style>
+</body>
+</html>

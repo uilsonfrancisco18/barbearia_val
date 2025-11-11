@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Corte + Luzes - Rota Cortes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+</head>
+<body class="body-agendamento">
+    <nav class="opçoes" aria-label="Navegação Principal">
+        <ul class="nav-sobre">
+            <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+            <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+            <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+            <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+        </ul>
+    </nav>
+
+    <main class="secao-agendamento-pagina">
+        <div class="container-agendamento">
+            <h1 class="titulo-agendamento">Corte + Luzes</h1>
+            <div class="divisoria"></div>
+            
+            <div class="info-servico-agendamento">
+                <div class="imagem-servico">
+                    <img src="corte+luzes.jpg" alt="Corte + Luzes">
+                </div>
+                <div class="detalhes-servico">
+                    <h3>Descrição do Serviço</h3>
+                    <p>Transformação completa! Combina corte personalizado com técnica de luzes para adicionar dimensão e brilho aos fios. Realce natural ou efeito marcante - criamos o visual perfeito para seu estilo.</p>
+                    
+                    <div class="info-preco-duracao">
+                        <div class="preco-agendamento">R$ 55,00</div>
+                        <div class="duracao-servico">⏱️ Duração: 90-120 minutos</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="formulario-agendamento">
+                <div class="secao-data">
+                    <h3>📅 Selecione a Data</h3>
+                    <input type="date" id="data-agendamento" name="data" class="input-data" required>
+                </div>
+
+                <div class="secao-horario">
+                    <h3>🕒 Horários Disponíveis</h3>
+                    <div class="grid-horarios">
+                        <!-- Manhã -->
+                        <div class="grupo-horario">
+                            <h4>Manhã</h4>
+                            <div class="horarios-manha">
+                                <button type="button" class="botao-horario" data-horario="08:00">08:00</button>
+                                <button type="button" class="botao-horario" data-horario="09:30">09:30</button>
+                                <button type="button" class="botao-horario" data-horario="11:00">11:00</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarde -->
+                        <div class="grupo-horario">
+                            <h4>Tarde</h4>
+                            <div class="horarios-tarde">
+                                <button type="button" class="botao-horario" data-horario="13:00">13:00</button>
+                                <button type="button" class="botao-horario" data-horario="14:30">14:30</button>
+                                <button type="button" class="botao-horario" data-horario="16:00">16:00</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secao-dados-cliente">
+                    <h3>👤 Seus Dados</h3>
+                    <div class="inputs-cliente">
+                        <input type="text" placeholder="Nome completo" class="input-cliente" required>
+                        <input type="tel" placeholder="Telefone/WhatsApp" class="input-cliente" required>
+                        <input type="email" placeholder="E-mail (opcional)" class="input-cliente">
+                        
+                        <div class="selecao-luzes">
+                            <h4>🎨 Tipo de Luzes</h4>
+                            <div class="opcoes-luzes">
+                                <label>
+                                    <input type="radio" name="luzes" value="naturais" checked>
+                                    <span class="opcao-titulo">Luzes Naturais</span>
+                                    <span class="opcao-desc">Realce sutil e natural</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="luzes" value="californianas">
+                                    <span class="opcao-titulo">Luzes Californianas</span>
+                                    <span class="opcao-desc">Efeito sol e praia</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="luzes" value="mechen">
+                                    <span class="opcao-titulo">Mechas</span>
+                                    <span class="opcao-desc">Fios mais marcantes</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="luzes" value="reflexo">
+                                    <span class="opcao-titulo">Reflexo</span>
+                                    <span class="opcao-desc">Brilho e luminosidade</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="selecao-cor">
+                            <h4>🌈 Cor das Luzes</h4>
+                            <div class="opcoes-cor">
+                                <label>
+                                    <input type="radio" name="cor" value="louro-claro" checked>
+                                    <span class="opcao-titulo">Louro Claro</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor" value="louro-medio">
+                                    <span class="opcao-titulo">Louro Médio</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor" value="louro-escuro">
+                                    <span class="opcao-titulo">Louro Escuro</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor" value="caramelo">
+                                    <span class="opcao-titulo">Caramelo</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor" value="mel">
+                                    <span class="opcao-titulo">Mel</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor" value="personalizada">
+                                    <span class="opcao-titulo">Personalizada</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <textarea placeholder="Observações (cor atual do cabelo, alergias, tratamentos anteriores, etc.)" class="input-cliente textarea-obs" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-confirmar-agendamento">
+                    ✅ Agendar Corte + Luzes
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Script para seleção de horários
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesHorario = document.querySelectorAll('.botao-horario');
+            let horarioSelecionado = null;
+
+            botoesHorario.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    // Remove seleção anterior
+                    botoesHorario.forEach(b => b.classList.remove('selecionado'));
+                    
+                    // Adiciona seleção atual
+                    this.classList.add('selecionado');
+                    horarioSelecionado = this.getAttribute('data-horario');
+                    
+                    console.log('Horário selecionado:', horarioSelecionado);
+                });
+            });
+
+            // Não permitir datas passadas
+            const inputData = document.getElementById('data-agendamento');
+            const hoje = new Date().toISOString().split('T')[0];
+            inputData.min = hoje;
+
+            // Validação do formulário
+            const formulario = document.querySelector('.formulario-agendamento');
+            formulario.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!horarioSelecionado) {
+                    alert('⚠️ Por favor, selecione um horário!');
+                    return;
+                }
+
+                const nome = document.querySelector('input[type="text"]').value;
+                const telefone = document.querySelector('input[type="tel"]').value;
+                const data = inputData.value;
+                const tipoLuzesSelecionado = document.querySelector('input[name="luzes"]:checked');
+                const corSelecionada = document.querySelector('input[name="cor"]:checked');
+
+                if (!nome || !telefone || !data) {
+                    alert('⚠️ Preencha todos os campos obrigatórios!');
+                    return;
+                }
+
+                const tiposLuzes = {
+                    'naturais': 'Luzes Naturais',
+                    'californianas': 'Luzes Californianas', 
+                    'mechen': 'Mechas',
+                    'reflexo': 'Reflexo'
+                };
+
+                const cores = {
+                    'louro-claro': 'Louro Claro',
+                    'louro-medio': 'Louro Médio',
+                    'louro-escuro': 'Louro Escuro',
+                    'caramelo': 'Caramelo',
+                    'mel': 'Mel',
+                    'personalizada': 'Personalizada'
+                };
+
+                const tipoLuzes = tiposLuzes[tipoLuzesSelecionado.value];
+                const corLuzes = cores[corSelecionada.value];
+
+                // Simulação de agendamento
+                alert(`🎉 Agendamento Confirmado!\n\n💎 Serviço: Corte + Luzes\n🎨 Tipo: ${tipoLuzes}\n🌈 Cor: ${corLuzes}\n📅 Data: ${data}\n🕒 Horário: ${horarioSelecionado}\n👤 Cliente: ${nome}\n📞 Contato: ${telefone}\n💰 Valor: R$ 55,00\n\nEntraremos em contato para confirmação!`);
+                
+                // Aqui você pode adicionar o envio para o backend
+                // formulario.submit();
+            });
+        });
+    </script>
+
+    <style>
+        .selecao-luzes,
+        .selecao-cor {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(193, 154, 107, 0.2);
+        }
+        
+        .selecao-luzes h4,
+        .selecao-cor h4 {
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .opcoes-luzes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .opcoes-cor {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        .opcoes-luzes label,
+        .opcoes-cor label {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid rgba(193, 154, 107, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .opcoes-luzes label:hover,
+        .opcoes-cor label:hover {
+            background: rgba(193, 154, 107, 0.1);
+            border-color: var(--cor-primaria);
+            transform: translateY(-2px);
+        }
+        
+        .opcoes-luzes input[type="radio"],
+        .opcoes-cor input[type="radio"] {
+            margin-bottom: 10px;
+        }
+        
+        .opcao-titulo {
+            color: var(--cor-primaria);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+        
+        .opcao-desc {
+            color: var(--cor-texto-suave);
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .opcoes-luzes input[type="radio"]:checked + .opcao-titulo,
+        .opcoes-cor input[type="radio"]:checked + .opcao-titulo {
+            color: #fff;
+        }
+        
+        .opcoes-luzes label:has(input[type="radio"]:checked),
+        .opcoes-cor label:has(input[type="radio"]:checked) {
+            background: rgba(193, 154, 107, 0.2);
+            border-color: var(--cor-primaria);
+            box-shadow: 0 0 10px rgba(193, 154, 107, 0.3);
+        }
+    </style>
+</body>
+</html>

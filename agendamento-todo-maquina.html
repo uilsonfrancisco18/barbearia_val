@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Corte Todo na Máquina - Rota Cortes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+</head>
+<body class="body-agendamento">
+    <nav class="opçoes" aria-label="Navegação Principal">
+        <ul class="nav-sobre">
+            <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+            <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+            <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+            <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+        </ul>
+    </nav>
+
+    <main class="secao-agendamento-pagina">
+        <div class="container-agendamento">
+            <h1 class="titulo-agendamento">Corte Todo na Máquina</h1>
+            <div class="divisoria"></div>
+            
+            <div class="info-servico-agendamento">
+                <div class="imagem-servico">
+                    <img src="todo na maquina.jpg" alt="Corte Todo na Máquina">
+                </div>
+                <div class="detalhes-servico">
+                    <h3>Descrição do Serviço</h3>
+                    <p>Corte prático e uniforme realizado exclusivamente com máquina. Perfeito para quem busca praticidade, manutenção do corte social ou estilo militar. Acabamento limpo e preciso.</p>
+                    
+                    <div class="info-preco-duracao">
+                        <div class="preco-agendamento">R$ 20,00</div>
+                        <div class="duracao-servico">⏱️ Duração: 25 minutos</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="formulario-agendamento">
+                <div class="secao-data">
+                    <h3>📅 Selecione a Data</h3>
+                    <input type="date" id="data-agendamento" name="data" class="input-data" required>
+                </div>
+
+                <div class="secao-horario">
+                    <h3>🕒 Horários Disponíveis</h3>
+                    <div class="grid-horarios">
+                        <!-- Manhã -->
+                        <div class="grupo-horario">
+                            <h4>Manhã</h4>
+                            <div class="horarios-manha">
+                                <button type="button" class="botao-horario" data-horario="08:00">08:00</button>
+                                <button type="button" class="botao-horario" data-horario="08:25">08:25</button>
+                                <button type="button" class="botao-horario" data-horario="08:50">08:50</button>
+                                <button type="button" class="botao-horario" data-horario="09:15">09:15</button>
+                                <button type="button" class="botao-horario" data-horario="09:40">09:40</button>
+                                <button type="button" class="botao-horario" data-horario="10:05">10:05</button>
+                                <button type="button" class="botao-horario" data-horario="10:30">10:30</button>
+                                <button type="button" class="botao-horario" data-horario="10:55">10:55</button>
+                                <button type="button" class="botao-horario" data-horario="11:20">11:20</button>
+                                <button type="button" class="botao-horario" data-horario="11:45">11:45</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarde -->
+                        <div class="grupo-horario">
+                            <h4>Tarde</h4>
+                            <div class="horarios-tarde">
+                                <button type="button" class="botao-horario" data-horario="13:00">13:00</button>
+                                <button type="button" class="botao-horario" data-horario="13:25">13:25</button>
+                                <button type="button" class="botao-horario" data-horario="13:50">13:50</button>
+                                <button type="button" class="botao-horario" data-horario="14:15">14:15</button>
+                                <button type="button" class="botao-horario" data-horario="14:40">14:40</button>
+                                <button type="button" class="botao-horario" data-horario="15:05">15:05</button>
+                                <button type="button" class="botao-horario" data-horario="15:30">15:30</button>
+                                <button type="button" class="botao-horario" data-horario="15:55">15:55</button>
+                                <button type="button" class="botao-horario" data-horario="16:20">16:20</button>
+                                <button type="button" class="botao-horario" data-horario="16:45">16:45</button>
+                                <button type="button" class="botao-horario" data-horario="17:10">17:10</button>
+                                <button type="button" class="botao-horario" data-horario="17:35">17:35</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secao-dados-cliente">
+                    <h3>👤 Seus Dados</h3>
+                    <div class="inputs-cliente">
+                        <input type="text" placeholder="Nome completo" class="input-cliente" required>
+                        <input type="tel" placeholder="Telefone/WhatsApp" class="input-cliente" required>
+                        <input type="email" placeholder="E-mail (opcional)" class="input-cliente">
+                        
+                        <div class="selecao-maquina">
+                            <h4>🔧 Número da Máquina Desejado</h4>
+                            <div class="opcoes-maquina">
+                                <label><input type="radio" name="maquina" value="1"> Máquina 1</label>
+                                <label><input type="radio" name="maquina" value="2"> Máquina 2</label>
+                                <label><input type="radio" name="maquina" value="3"> Máquina 3</label>
+                                <label><input type="radio" name="maquina" value="4"> Máquina 4</label>
+                                <label><input type="radio" name="maquina" value="5"> Máquina 5</label>
+                                <label><input type="radio" name="maquina" value="6"> Máquina 6</label>
+                                <label><input type="radio" name="maquina" value="7"> Máquina 7</label>
+                                <label><input type="radio" name="maquina" value="8"> Máquina 8</label>
+                                <label><input type="radio" name="maquina" value="9"> Máquina 9</label>
+                                <label><input type="radio" name="maquina" value="zero"> Zero (raspado)</label>
+                            </div>
+                        </div>
+                        
+                        <textarea placeholder="Observações (degradê, estilo específico, etc.)" class="input-cliente textarea-obs" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-confirmar-agendamento">
+                    ✅ Agendar Corte na Máquina
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Script para seleção de horários
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesHorario = document.querySelectorAll('.botao-horario');
+            let horarioSelecionado = null;
+
+            botoesHorario.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    // Remove seleção anterior
+                    botoesHorario.forEach(b => b.classList.remove('selecionado'));
+                    
+                    // Adiciona seleção atual
+                    this.classList.add('selecionado');
+                    horarioSelecionado = this.getAttribute('data-horario');
+                    
+                    console.log('Horário selecionado:', horarioSelecionado);
+                });
+            });
+
+            // Não permitir datas passadas
+            const inputData = document.getElementById('data-agendamento');
+            const hoje = new Date().toISOString().split('T')[0];
+            inputData.min = hoje;
+
+            // Validação do formulário
+            const formulario = document.querySelector('.formulario-agendamento');
+            formulario.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!horarioSelecionado) {
+                    alert('⚠️ Por favor, selecione um horário!');
+                    return;
+                }
+
+                const nome = document.querySelector('input[type="text"]').value;
+                const telefone = document.querySelector('input[type="tel"]').value;
+                const data = inputData.value;
+                const maquinaSelecionada = document.querySelector('input[name="maquina"]:checked');
+
+                if (!nome || !telefone || !data) {
+                    alert('⚠️ Preencha todos os campos obrigatórios!');
+                    return;
+                }
+
+                if (!maquinaSelecionada) {
+                    alert('⚠️ Por favor, selecione o número da máquina desejado!');
+                    return;
+                }
+
+                const numeroMaquina = maquinaSelecionada.value === 'zero' ? 'Zero (raspado)' : `Máquina ${maquinaSelecionada.value}`;
+
+                // Simulação de agendamento
+                alert(`🎉 Agendamento Confirmado!\n\n💎 Serviço: Corte Todo na Máquina\n🔧 Nível: ${numeroMaquina}\n📅 Data: ${data}\n🕒 Horário: ${horarioSelecionado}\n👤 Cliente: ${nome}\n📞 Contato: ${telefone}\n💰 Valor: R$ 20,00\n\nEntraremos em contato para confirmação!`);
+                
+                // Aqui você pode adicionar o envio para o backend
+                // formulario.submit();
+            });
+        });
+    </script>
+
+    <style>
+        .selecao-maquina {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(193, 154, 107, 0.2);
+        }
+        
+        .selecao-maquina h4 {
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .opcoes-maquina {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        
+        .opcoes-maquina label {
+            display: flex;
+            align-items: center;
+            color: var(--cor-texto-claro);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .opcoes-maquina label:hover {
+            background: rgba(193, 154, 107, 0.1);
+        }
+        
+        .opcoes-maquina input[type="radio"] {
+            margin-right: 8px;
+        }
+    </style>
+</body>
+</html>

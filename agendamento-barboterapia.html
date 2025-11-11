@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Barboterapia | Vapor Ozônio - Rota Cortes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+</head>
+<body class="body-agendamento">
+    <nav class="opçoes" aria-label="Navegação Principal">
+        <ul class="nav-sobre">
+            <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+            <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+            <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+            <li><a href="index.html" class="nav-link">INÍCIO</a></li>
+        </ul>
+    </nav>
+
+    <main class="secao-agendamento-pagina">
+        <div class="container-agendamento">
+            <h1 class="titulo-agendamento">Barboterapia | Vapor Ozônio</h1>
+            <div class="divisoria"></div>
+            
+            <div class="info-servico-agendamento">
+                <div class="imagem-servico">
+                    <img src="Barboterapia.jpg" alt="Barboterapia | Vapor Ozônio">
+                </div>
+                <div class="detalhes-servico">
+                    <h3>Descrição do Serviço</h3>
+                    <p>Tratamento premium para a barba que combina vapor ozônio terapêutico com produtos especiais. Hidrata profundamente, amolece os fios, abre os poros e proporciona relaxamento facial. Ideal para barbas ressecadas e com irritações.</p>
+                    
+                    <div class="info-preco-duracao">
+                        <div class="preco-agendamento">R$ 45,00</div>
+                        <div class="duracao-servico">⏱️ Duração: 50 minutos</div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="formulario-agendamento">
+                <div class="secao-data">
+                    <h3>📅 Selecione a Data</h3>
+                    <input type="date" id="data-agendamento" name="data" class="input-data" required>
+                </div>
+
+                <div class="secao-horario">
+                    <h3>🕒 Horários Disponíveis</h3>
+                    <div class="grid-horarios">
+                        <!-- Manhã -->
+                        <div class="grupo-horario">
+                            <h4>Manhã</h4>
+                            <div class="horarios-manha">
+                                <button type="button" class="botao-horario" data-horario="08:00">08:00</button>
+                                <button type="button" class="botao-horario" data-horario="08:50">08:50</button>
+                                <button type="button" class="botao-horario" data-horario="09:40">09:40</button>
+                                <button type="button" class="botao-horario" data-horario="10:30">10:30</button>
+                                <button type="button" class="botao-horario" data-horario="11:20">11:20</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarde -->
+                        <div class="grupo-horario">
+                            <h4>Tarde</h4>
+                            <div class="horarios-tarde">
+                                <button type="button" class="botao-horario" data-horario="13:00">13:00</button>
+                                <button type="button" class="botao-horario" data-horario="13:50">13:50</button>
+                                <button type="button" class="botao-horario" data-horario="14:40">14:40</button>
+                                <button type="button" class="botao-horario" data-horario="15:30">15:30</button>
+                                <button type="button" class="botao-horario" data-horario="16:20">16:20</button>
+                                <button type="button" class="botao-horario" data-horario="17:10">17:10</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secao-dados-cliente">
+                    <h3>👤 Seus Dados</h3>
+                    <div class="inputs-cliente">
+                        <input type="text" placeholder="Nome completo" class="input-cliente" required>
+                        <input type="tel" placeholder="Telefone/WhatsApp" class="input-cliente" required>
+                        <input type="email" placeholder="E-mail (opcional)" class="input-cliente">
+                        
+                        <div class="selecao-tratamento">
+                            <h4>🌿 Tipo de Tratamento Preferido</h4>
+                            <div class="opcoes-tratamento">
+                                <label>
+                                    <input type="radio" name="tratamento" value="hidratacao" checked>
+                                    <span class="opcao-titulo">Hidratação Intensa</span>
+                                    <span class="opcao-desc">Para barbas ressecadas</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tratamento" value="relaxante">
+                                    <span class="opcao-titulo">Relaxante Facial</span>
+                                    <span class="opcao-desc">Alívio de tensões</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tratamento" value="revitalizante">
+                                    <span class="opcao-titulo">Revitalizante</span>
+                                    <span class="opcao-desc">Para fios quebradiços</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tratamento" value="profissional">
+                                    <span class="opcao-titulo">Profissional</span>
+                                    <span class="opcao-desc">Combo completo</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <textarea placeholder="Observações (sensibilidade na pele, alergias, etc.)" class="input-cliente textarea-obs" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-confirmar-agendamento">
+                    ✅ Agendar Barboterapia
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Script para seleção de horários
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesHorario = document.querySelectorAll('.botao-horario');
+            let horarioSelecionado = null;
+
+            botoesHorario.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    // Remove seleção anterior
+                    botoesHorario.forEach(b => b.classList.remove('selecionado'));
+                    
+                    // Adiciona seleção atual
+                    this.classList.add('selecionado');
+                    horarioSelecionado = this.getAttribute('data-horario');
+                    
+                    console.log('Horário selecionado:', horarioSelecionado);
+                });
+            });
+
+            // Não permitir datas passadas
+            const inputData = document.getElementById('data-agendamento');
+            const hoje = new Date().toISOString().split('T')[0];
+            inputData.min = hoje;
+
+            // Validação do formulário
+            const formulario = document.querySelector('.formulario-agendamento');
+            formulario.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!horarioSelecionado) {
+                    alert('⚠️ Por favor, selecione um horário!');
+                    return;
+                }
+
+                const nome = document.querySelector('input[type="text"]').value;
+                const telefone = document.querySelector('input[type="tel"]').value;
+                const data = inputData.value;
+                const tratamentoSelecionado = document.querySelector('input[name="tratamento"]:checked');
+
+                if (!nome || !telefone || !data) {
+                    alert('⚠️ Preencha todos os campos obrigatórios!');
+                    return;
+                }
+
+                const tratamentos = {
+                    'hidratacao': 'Hidratação Intensa',
+                    'relaxante': 'Relaxante Facial', 
+                    'revitalizante': 'Revitalizante',
+                    'profissional': 'Profissional'
+                };
+
+                const tipoTratamento = tratamentos[tratamentoSelecionado.value];
+
+                // Simulação de agendamento
+                alert(`🎉 Agendamento Confirmado!\n\n💎 Serviço: Barboterapia | Vapor Ozônio\n🌿 Tratamento: ${tipoTratamento}\n📅 Data: ${data}\n🕒 Horário: ${horarioSelecionado}\n👤 Cliente: ${nome}\n📞 Contato: ${telefone}\n💰 Valor: R$ 45,00\n\nEntraremos em contato para confirmação!`);
+                
+                // Aqui você pode adicionar o envio para o backend
+                // formulario.submit();
+            });
+        });
+    </script>
+
+    <style>
+        .selecao-tratamento {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(193, 154, 107, 0.2);
+        }
+        
+        .selecao-tratamento h4 {
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .opcoes-tratamento {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .opcoes-tratamento label {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid rgba(193, 154, 107, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .opcoes-tratamento label:hover {
+            background: rgba(193, 154, 107, 0.1);
+            border-color: var(--cor-primaria);
+            transform: translateY(-2px);
+        }
+        
+        .opcoes-tratamento input[type="radio"] {
+            margin-bottom: 10px;
+        }
+        
+        .opcao-titulo {
+            color: var(--cor-primaria);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+        
+        .opcao-desc {
+            color: var(--cor-texto-suave);
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .opcoes-tratamento input[type="radio"]:checked + .opcao-titulo {
+            color: #fff;
+        }
+        
+        .opcoes-tratamento label:has(input[type="radio"]:checked) {
+            background: rgba(193, 154, 107, 0.2);
+            border-color: var(--cor-primaria);
+            box-shadow: 0 0 10px rgba(193, 154, 107, 0.3);
+        }
+    </style>
+</body>
+</html>

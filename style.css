@@ -839,3 +839,299 @@ body::before {
     font-weight: bold;
     margin-top: 15px;
 }
+
+
+
+/* ==================================== */
+/* ESTILOS PARA PÁGINAS DE AGENDAMENTO */
+/* ==================================== */
+
+.body-agendamento {
+    background: var(--cor-secundaria);
+    height: auto;
+    min-height: 100vh;
+}
+
+.secao-agendamento-pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 120px 20px 50px 20px;
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    width: 100%;
+}
+
+.container-agendamento {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(193, 154, 107, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+.titulo-agendamento {
+    color: var(--cor-primaria);
+    font-size: clamp(2.5em, 5vw, 3.5em);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(193, 154, 107, 0.5);
+}
+
+/* Info do Serviço */
+.info-servico-agendamento {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(193, 154, 107, 0.2);
+}
+
+.imagem-servico img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.detalhes-servico h3 {
+    color: var(--cor-primaria);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.detalhes-servico p {
+    color: var(--cor-texto-suave);
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.info-preco-duracao {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.preco-agendamento {
+    color: var(--cor-primaria);
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(193, 154, 107, 0.4);
+}
+
+.duracao-servico {
+    color: var(--cor-texto-claro);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Formulário */
+.formulario-agendamento {
+    text-align: left;
+}
+
+.formulario-agendamento h3 {
+    color: var(--cor-primaria);
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.formulario-agendamento h4 {
+    color: var(--cor-texto-claro);
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Seção Data */
+.secao-data {
+    margin-bottom: 40px;
+}
+
+.input-data {
+    padding: 15px;
+    border: 1px solid rgba(193, 154, 107, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.1em;
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+.input-data:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 10px rgba(193, 154, 107, 0.3);
+}
+
+/* Grid de Horários */
+.grid-horarios {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.grupo-horario {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.horarios-manha,
+.horarios-tarde {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+}
+
+.botao-horario {
+    padding: 15px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(193, 154, 107, 0.2);
+    border-radius: 8px;
+    color: var(--cor-texto-claro);
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-horario:hover {
+    background: rgba(193, 154, 107, 0.1);
+    border-color: var(--cor-primaria);
+    transform: translateY(-2px);
+}
+
+.botao-horario.selecionado {
+    background: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border-color: var(--cor-primaria);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(193, 154, 107, 0.5);
+}
+
+/* Dados do Cliente */
+.secao-dados-cliente {
+    margin-bottom: 40px;
+}
+
+.inputs-cliente {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-cliente {
+    padding: 15px;
+    border: 1px solid rgba(193, 154, 107, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.input-cliente:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 10px rgba(193, 154, 107, 0.3);
+}
+
+.textarea-obs {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Botão Confirmar */
+.botao-confirmar-agendamento {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--cor-primaria), #d1b48b);
+    color: var(--cor-secundaria);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.botao-confirmar-agendamento:hover {
+    background: linear-gradient(135deg, #d1b48b, var(--cor-primaria));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 20px var(--cor-primaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .secao-agendamento-pagina {
+        padding: 100px 15px 30px 15px;
+    }
+    
+    .container-agendamento {
+        padding: 25px 20px;
+        margin: 0 10px;
+    }
+    
+    .info-servico-agendamento {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .imagem-servico img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .info-preco-duracao {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .horarios-manha,
+    .horarios-tarde {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .input-data {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .horarios-manha,
+    .horarios-tarde {
+        grid-template-columns: 1fr;
+    }
+    
+    .botao-horario {
+        padding: 12px 8px;
+        font-size: 0.9em;
+    }
+    
+    .titulo-agendamento {
+        font-size: 2em;
+    }
+}
